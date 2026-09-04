@@ -1,6 +1,6 @@
 {
   "name": "prompt-cache-fit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reorder LLM prompt blocks from least- to most-volatile so provider prefix caches stay hot, and measure the resulting hit rate.",
   "license": "MIT",
   "type": "module",

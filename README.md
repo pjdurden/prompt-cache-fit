@@ -84,6 +84,16 @@ An empty prompt string contributes `0` instead of dividing by zero.
 
 `fit()` is a stable sort by volatility rank plus a reinsertion pass for pinned blocks; `hitRate()` is a character-by-character common-prefix scan. That is the whole library. It does not know how any provider actually tokenizes or chunks its cache, so `stablePrefixChars` and `hitRate` are character-level proxies, not a guarantee of a provider-side cache hit: real caches key on token boundaries and have their own minimum prefix length and TTL. This package also does not inject provider-specific cache markers (Anthropic's `cache_control`, OpenAI's automatic prefix caching, etc.) into the output; ordering the blocks correctly is a precondition for those markers to help, but adding the markers themselves is left to the caller, since the marker format is provider-specific and out of scope here.
 
+## Related
+
+Small, single-purpose packages for the same problem space. Each one has zero
+dependencies and does one thing.
+
+- [`cmd-risk`](https://github.com/pjdurden/cmd-risk) - Classify how destructive a shell command is, so an agent knows when to ask a human.
+- [`apply-edit-block`](https://github.com/pjdurden/apply-edit-block) - Apply LLM search/replace edit blocks that do not match the source exactly.
+- [`ctx-compact`](https://github.com/pjdurden/ctx-compact) - Trim a conversation to a token budget without ever orphaning a tool result.
+- [`cassette-fn`](https://github.com/pjdurden/cassette-fn) - Record and replay LLM calls at the function boundary, so your tools still run on replay.
+
 ## License
 
 MIT
