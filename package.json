@@ -1,0 +1,39 @@
+{
+  "name": "prompt-cache-fit",
+  "version": "0.1.0",
+  "description": "Reorder LLM prompt blocks from least- to most-volatile so provider prefix caches stay hot, and measure the resulting hit rate.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjdurden/prompt-cache-fit.git"
+  },
+  "keywords": [
+    "llm",
+    "prompt-caching",
+    "prefix-cache",
+    "anthropic",
+    "openai",
+    "prompt-engineering",
+    "cache-hit-rate",
+    "context-window"
+  ],
+  "author": "Prajjwal Chittori"
+}
