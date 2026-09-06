@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prompt-cache-fit"
+version = "0.1.0"
+description = "Reorder LLM prompt blocks from least- to most-volatile so provider prefix caches stay hot, and measure whether it actually worked."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Prajjwal Chittori"}]
+keywords = ["llm", "prompt-caching", "prefix-cache", "anthropic", "openai", "prompt-engineering"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/pjdurden/prompt-cache-fit"
+Source = "https://github.com/pjdurden/prompt-cache-fit"
+
+[tool.hatch.build.targets.wheel]
+include = ["prompt_cache_fit.py", "py.typed"]
